@@ -1,5 +1,9 @@
 <header class="page-header">
 	<div class="page-header__inner container">
 		{% include 'logo.twig' %}
+
+		{% include 'nav.twig' with { bemMix: 'page-header__nav', navLinks } %}
+
+		{% include 'main-header.twig' with { bemMix: 'page-main__header', socials } %}
 	</div>
 </header>

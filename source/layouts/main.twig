@@ -26,8 +26,10 @@
 				{% include 'components/page-header.twig' %}
 			{% endblock %}
 
-			<main class="page__main page-main"> {% block main %}{% endblock %}
-				</main>
+			<main class="page__main page-main">
+				{% block main %}
+				{% endblock %}
+			</main>
 
 				{% block footer %}
 					{% include 'components/page-footer.twig' %}
