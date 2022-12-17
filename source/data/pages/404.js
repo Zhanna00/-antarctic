@@ -7,7 +7,6 @@ export default {
     image: {
       default: 'img/firstscreen.jpg',
       default2x: 'img/firstscreen@2x.jpg',
-      immediately: true,
       webp: 'img/firstscreen.webp',
       webp2x: 'img/firstscreen@2x.webp',
     },

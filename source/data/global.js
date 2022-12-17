@@ -1,3 +1,24 @@
+export const getPictures = (filename, additions = {}, useTablet = true, useMobile = true) => {
+  const image = Object.assign(additions, {
+    default: `img/${filename}.jpg`,
+    default2x: `img/${filename}@2x.jpg`,
+    webp: `img/${filename}.webp`,
+    webp2x: `img/${filename}@2x.webp`,
+  });
+
+  if (useTablet) {
+    image.webpTablet = `img/${filename}-tablet.webp`;
+    image.webpTablet2x = `img/${filename}-tablet@2x.webp`;
+  }
+
+  if (useMobile) {
+    image.webpMobile = `img/${filename}-mobile.webp`;
+    image.webpMobile2x = `img/${filename}-mobile@2x.webp`;
+  }
+
+  return image;
+};
+
 export default {
   description: 'Сайт по организации туров в Антарктику.',
   projectName: 'Антарктика',
@@ -8,26 +29,32 @@ export default {
       url: '#!',
     },
     {
-      id: 'vk',
-      title: 'Мы в Контакте.',
+      id: 'dzen',
+      title: 'Мы в Яндекс.Дзен',
       url: '#!',
     },
     {
-      id: 'pinterest',
-      title: 'Мы в Pinterest',
+      id: 'reddit',
+      title: 'Мы в Reddit',
       url: '#!',
     },
   ],
-  navLinks: {
-    list: [
-      'Преимущества',
-      'Направления',
-      'Ближайшие круизы',
-      'Контакты',
-    ].map((title) => ({
-      title,
+  navLinks: [
+    {
       url: '#!',
-    })),
-  },
-  navTogglerText: 'Список ссылок.',
+      title: 'Преимущества',
+    },
+    {
+      url: '#!',
+      title: 'Направления',
+    },
+    {
+      url: '#!',
+      title: 'Ближайшие круизы',
+    },
+    {
+      url: '#!',
+      title: 'Контакты',
+    },
+  ],
 };
