@@ -1,0 +1,23 @@
+.content {
+  padding: 112px 0;
+}
+
+.content__promo {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  gap: 64px;
+  align-items: center;
+  color: $color-tangaroa;
+  margin-bottom: 25px;
+
+  h2 {
+    margin: -4px 0 24px 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
