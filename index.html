@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Антарктика</title>
+  <meta name="description" content="Сайт по организации туров в Антарктику.">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="fonts/montserrat-400.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="fonts/montserrat-500.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="fonts/montserrat-600.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="fonts/montserrat-700.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#011c40">
+  <meta name="msapplication-TileColor" content="#011c40">
+  <meta name="theme-color" content="#f9fbfd">
+</head>
+
+<body>
+  <div class="page">
+    <div class="firstscreen page__firstscreen" style="--bg-default: url('../img/firstscreen.jpg');--bg-default2x: url('../img/firstscreen@2x.jpg');--bg-webp: url('../img/firstscreen.webp');--bg-webp2x: url('../img/firstscreen@2x.webp');--bg-webpTablet: url('../img/firstscreen-tablet.webp');--bg-webpTablet2x: url('../img/firstscreen-tablet@2x.webp');--bg-webpMobile: url('../img/firstscreen-mobile.webp');--bg-webpMobile2x: url('../img/firstscreen-mobile@2x.webp');">
+      <div class="container">
+        <header class="page-header firstscreen__header">
+          <a class="logo firstscreen__header" aria-current="page">
+            <img class="logo__image" src="img/svg/logo.svg" alt="Логотип Антарктика." width="70" height="38">
+          </a>
+          <button class="page-header__toggler" type="button">
+            <span class="visually-hidden">Переключить режим отображения меню.</span>
+          </button>
+          <nav class="page-header__nav" id="nav">
+            <ul class="nav page-header__nav-list">
+              <li>
+                <a class="nav__link" href="#!">Преимущества</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#!">Направления</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#!">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a class="nav__link" href="#!">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <section class="firstscreen__promo">
+          <h1>Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+        </section>
+      </div>
+    </div>
+
+    <main class="page__main page-main">
+
+      <section class="content ">
+        <div class="content__promo container">
+          <div>
+            <h2>Путешествие на&nbsp;край Земли</h2>
+            <p>
+              Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер
+              отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских
+              котиков и&nbsp;многое другое.
+            </p>
+          </div>
+          <picture>
+            <source type="image/webp" media="(max-width: 320px)" srcset="img/about-mobile.webp 1x, img/about-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/about-tablet.webp 1x, img/about-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/about.webp 1x, img/about@2x.webp 2x">
+            <img src="img/about.jpg" srcset="img/about@2x.jpg 2x" alt="Пингвины на снегу" loading="lazy">
+          </picture>
+        </div>
+      </section>
+
+      <section class="list " style="--bg-default: url('../img/advantages.jpg');--bg-default2x: url('../img/advantages@2x.jpg');--bg-webp: url('../img/advantages.webp');--bg-webp2x: url('../img/advantages@2x.webp');--bg-webpTablet: url('../img/advantages-tablet.webp');--bg-webpTablet2x: url('../img/advantages-tablet@2x.webp');--bg-webpMobile: url('../img/advantages-mobile.webp');--bg-webpMobile2x: url('../img/advantages-mobile@2x.webp');--bg-color: #e3ecf6;">
+        <div class="container">
+          <h2 class="list__heading">Преимущества</h2>
+          <ul class="list__items">
+            <li class="list__item" style="--icon: url('../img/sprite.svg#icon-liner')">
+              <h3>Небольшой круизный&nbsp;лайнер</h3>
+              <p>
+                Круизный лайнер, рассчитанный всего лишь на&nbsp;300 гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность
+                насладиться видами и&nbsp;природой.
+              </p>
+            </li>
+            <li class="list__item" style="--icon: url('../img/sprite.svg#icon-ticks')">
+              <h3>Система все включено</h3>
+              <p>
+                Все наши круизы работают по<br>системе &laquo;Все Включено&raquo;.<br>Великолепные блюда и&nbsp;безлимитный бар доступны для вас&nbsp;24
+                часа.
+              </p>
+            </li>
+            <li class="list__item" style="--icon: url('../img/sprite.svg#icon-ship')">
+              <h3>Экскурсионные туры&nbsp;на&nbsp;Zodiac</h3>
+              <p>
+                Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на<br>оборудованных лодках типа Zodiack c<br>опытными
+                экскурсоводами.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="container">
+          <h2 class="cards__heading">Ближайшие круизы</h2>
+          <ul class="cards__items">
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Астория&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина ‐ Фолклендские острова ‐ Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>11 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;11500 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-1.webp 1x, img/service-1@2x.webp 2x">
+                <img src="img/service-1.jpg" srcset="img/service-1@2x.jpg 2x" alt="Круиз “Астория“." loading="lazy">
+              </picture>
+            </li>
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Элайн&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина ‐ Фолклендские острова ‐ Антарктида ‐ Чили</p>
+                <h4>Порт отправления</h4>
+                <p>Буэнос-Айрес</p>
+                <h4>Продолжительность</h4>
+                <p>20 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;14500 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-2.webp 1x, img/service-2@2x.webp 2x">
+                <img src="img/service-2.jpg" srcset="img/service-2@2x.jpg 2x" alt="Круиз “Элайн“." loading="lazy">
+              </picture>
+            </li>
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Атлантис&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина ‐ Южная Георгия и&nbsp;Южные Сандвичевы Острова ‐ Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>15 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;14500 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-3.webp 1x, img/service-3@2x.webp 2x">
+                <img src="img/service-3.jpg" srcset="img/service-3@2x.jpg 2x" alt="Круиз “Атлантис“." loading="lazy">
+              </picture>
+            </li>
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Одиссей&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Чили ‐ Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Пунта-Аренас</p>
+                <h4>Продолжительность</h4>
+                <p>13 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;9700 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-4.webp 1x, img/service-4@2x.webp 2x">
+                <img src="img/service-4.jpg" srcset="img/service-4@2x.jpg 2x" alt="Круиз “Одиссей“." loading="lazy">
+              </picture>
+            </li>
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Олимпия&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина ‐ Фолклендские острова ‐ Южная Георгия ‐ Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>21 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;18600 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-5.webp 1x, img/service-5@2x.webp 2x">
+                <img src="img/service-5.jpg" srcset="img/service-5@2x.jpg 2x" alt="Круиз “Олимпия“." loading="lazy">
+              </picture>
+            </li>
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Аврора&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина ‐ Антарктида ‐ Чили</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>14 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;11700 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-6.webp 1x, img/service-6@2x.webp 2x">
+                <img src="img/service-6.jpg" srcset="img/service-6@2x.jpg 2x" alt="Круиз “Аврора“." loading="lazy">
+              </picture>
+            </li>
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Леонор&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Чили ‐ Южная Георгия ‐ Антарктида ‐ Аргентина</p>
+                <h4>Порт отправления</h4>
+                <p>Пунта-Аренас</p>
+                <h4>Продолжительность</h4>
+                <p>17 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;12500 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-7.webp 1x, img/service-7@2x.webp 2x">
+                <img src="img/service-7.jpg" srcset="img/service-7@2x.jpg 2x" alt="Круиз “Леонор“." loading="lazy">
+              </picture>
+            </li>
+            <li class="cards__item">
+              <div class="cards__content">
+                <h3 class="cards__item-heading">Круиз &laquo;Минион&nbsp;&mdash; 1&raquo;</h3>
+                <h4>Маршрут</h4>
+                <p>Аргентина ‐ Антарктида</p>
+                <h4>Порт отправления</h4>
+                <p>Ушуайя</p>
+                <h4>Продолжительность</h4>
+                <p>11 дней</p>
+                <h4>Цена</h4>
+                <p>от&nbsp;12300 $</p>
+                <a class="cards__btn btn" href="#!">Забронировать</a>
+              </div>
+              <picture>
+                <source type="image/webp" srcset="img/service-2.webp 1x, img/service-2@2x.webp 2x">
+                <img src="img/service-2.jpg" srcset="img/service-2@2x.jpg 2x" alt="Круиз “Минион - 1”." loading="lazy">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__inner container">
+        <ul class="socials page-footer__socials">
+          <li>
+            <a class="socials__link socials__link--ok" href="#!">
+              <span class="visually-hidden">Мы&nbsp;в&nbsp;Одноклассниках.</span>
+            </a>
+          </li>
+          <li>
+            <a class="socials__link socials__link--dzen" href="#!">
+              <span class="visually-hidden">Мы&nbsp;в&nbsp;Яндекс.Дзен</span>
+            </a>
+          </li>
+          <li>
+            <a class="socials__link socials__link--reddit" href="#!">
+              <span class="visually-hidden">Мы&nbsp;в&nbsp;Reddit</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+</html>
