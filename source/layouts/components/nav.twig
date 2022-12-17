@@ -1,15 +1,7 @@
-<div class="nav {{ bemMix }}">
-
-	<button class="nav__toggler" type="button">
-		<span class="visually-hidden">{{ navTogglerText }}</span>
-	</button>
-
-	<ul class="nav__list">
-		{% for item in list %}
-			<li class="nav__item">
-				<a class="nav__link" href="{{ item.url }}">{{ item.title }}</a>
-			</li>
-		{% endfor %}
-	</ul>
-
-</div>
+<ul class="nav {{ bemMix }}">
+	{% for link in navLinks %}
+		<li>
+			<a class="nav__link" href="{{ link.url }}">{{ link.title }}</a>
+		</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,16 @@
+.page-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 0;
+}
+
+.page-header__toggler {
+  display: none;
+}
+
+.page-header__nav-list {
+  justify-content: flex-end;
+  margin: 0;
+}

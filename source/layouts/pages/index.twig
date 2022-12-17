@@ -1,5 +1,9 @@
 {% extends '../main.twig' %}
 
 {% block main %}
-	{% include '../components/main-header.twig' with promo|merge({ bemMix: 'page-main__header' }) %}
+	{% include '../components/content.twig' with about %}
+
+	{% include '../components/list.twig' with benefits %}
+
+	{% include '../components/cards.twig' with offers %}
 {% endblock %}

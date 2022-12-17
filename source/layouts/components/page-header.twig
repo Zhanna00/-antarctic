@@ -1,9 +1,11 @@
-<header class="page-header">
-	<div class="page-header__inner container">
-		{% include 'logo.twig' %}
+<header class="page-header {{ bemMix }}">
+	{% include 'logo.twig' %}
 
-		{% include 'nav.twig' with { bemMix: 'page-header__nav', navLinks } %}
+	<button class="page-header__toggler" type="button">
+		<span class="visually-hidden">Переключить режим отображения меню.</span>
+	</button>
 
-		{% include 'main-header.twig' with { bemMix: 'page-main__header', socials } %}
-	</div>
+	<nav class="page-header__nav" id="nav">
+		{% include 'nav.twig' with { bemMix: 'page-header__nav-list', navLinks } %}
+	</nav>
 </header>
