@@ -32,15 +32,15 @@ export default {
         alias: 'ticks',
         content: html`<h3>Система все включено</h3>
           <p>
-            Все наши круизы работают по<br>системе "Все Включено".<br>Великолепные блюда и безлимитный бар доступны для вас 24
-            часа.
+            Все наши круизы работают по<br />системе "Все Включено".<br />Великолепные блюда и безлимитный бар доступны
+            для вас 24 часа.
           </p>`,
       },
       {
         alias: 'ship',
         content: html`<h3>Экскурсионные туры&nbsp;на Zodiac</h3>
           <p>
-            Экскурсионные туры к берегам Антарктиды совершаются на<br>оборудованных лодках типа Zodiack c<br>опытными
+            Экскурсионные туры к берегам Антарктиды совершаются на<br />оборудованных лодках типа Zodiack c<br />опытными
             экскурсоводами.
           </p>`,
       },
@@ -147,5 +147,47 @@ export default {
       url: '#!',
     })),
     linkText: 'Забронировать',
+  },
+  feedback: {
+    background: getPictures('form-section'),
+    backgroundColor: '#e3ecf6',
+    content: html`<h2>Раннее бронирование</h2>
+      <p>Забронируйте тур за 3-6 месяцев<br>до даты выезда и сэкономьте до 50%</p>`,
+    form: {
+      action: 'https://echo.htmlacademy.ru',
+      description: 'Оставьте заявку и мы свяжемся с вами в ближайшее время',
+      fields: [
+        html`<input
+            id="order-name"
+            name="name"
+            type="text"
+            placeholder="Имя"
+            pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
+            required
+          />
+          <strong>Введите имя из буквенных символов</strong>
+          <label for="order-name">Имя</label>`,
+        html`<input
+            id="order-phone"
+            name="phone"
+            type="tel"
+            placeholder="Телефон"
+            pattern="^\\+7\\(\\d{3}\\)\\d{7}$"
+            required
+          />
+          <strong>Введите телефон (только цифры)</strong>
+          <label for="order-phone">Телефон</label>`,
+        html`<input id="order-email" name="email" type="email" placeholder="Email" required />
+          <strong>Введите адрес электронной почты</strong>
+          <label for="order-email">Email</label>`,
+        html`<label>
+          <input name="agree" type="checkbox" checked required />
+          <span>Я согласен на обработку моих&nbsp;персональных&nbsp;данных</span>
+          <strong>Согласие на обработку обязательно</strong>
+        </label>`,
+      ],
+      method: 'post',
+      submitText: 'Оставить заявку',
+    },
   },
 };

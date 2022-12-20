@@ -1,0 +1,83 @@
+.form {
+  padding: 50px;
+  background-color: $color-tangaroa;
+  color: $color-alice-blue;
+}
+
+.form__description {
+  margin: -7px 0 28px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.form__group {
+  margin: 0 0 20px;
+
+  input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 13px 16px 12px;
+    font-size: 14px;
+    color: $color-tangaroa;
+    background-color: $color-alice-blue;
+    border: none;
+  }
+
+  [type="checkbox"] {
+    appearance: none;
+    display: flex;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $color-alice-blue;
+    cursor: pointer;
+
+    &:checked::before {
+      content: "";
+      margin: auto;
+      width: 12px;
+      height: 8px;
+      background-color: $color-tangaroa;
+
+      @include mask("icon-agreement");
+    }
+  }
+
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 10px;
+    line-height: 13px;
+    cursor: pointer;
+
+    [type="checkbox"] {
+      margin-right: 5px;
+    }
+  }
+
+  label[for] {
+    @include visually-hidden;
+  }
+
+  [name] ~ strong {
+    display: none;
+    width: 100%;
+    margin: 5px 0 0;
+    font-weight: inherit;
+    font-size: 12px;
+    color: $color-sunset-orange;
+  }
+
+  &.is-validable {
+    :invalid ~ strong {
+      display: block;
+    }
+  }
+}
+
+.form__btn {
+  width: 100%;
+  min-height: 43px;
+  margin-top: 10px;
+}

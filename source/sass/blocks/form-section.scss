@@ -1,0 +1,40 @@
+.form-section {
+  background-color: var(--bg-color, transparent);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+
+  @include background-image;
+}
+
+.form-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 403px;
+  gap: 50px;
+  align-items: center;
+  padding-right: 105px;
+  padding-left: 105px;
+}
+
+.form-section__content {
+  color: $color-tangaroa;
+
+  h2 {
+    margin: 15px 0 26px;
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  p {
+    margin: 0 0 6px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+.form-section__form {
+  max-width: 403px;
+  margin: 0 auto;
+
+  @include shadow(45px);
+}
