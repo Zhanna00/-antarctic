@@ -1,23 +1,34 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import initForm from './modules/form.js';
+import initMaps from './modules/map.js';
 
-// ---------------------------------
+// все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
+// в load следует добавить скрипты, не участвующие в работе первого экрана
+window.addEventListener('load', () => {
+  const initLazy = () => {
+    if (window.pageYOffset <= window.innerHeight) {
+      return;
+    }
 
-window.addEventListener('DOMContentLoaded', () => {
+    initMaps(document.querySelectorAll('[data-map][id]'));
+    document.querySelectorAll('[data-form]').forEach(initForm);
 
-  // Utils
-  // ---------------------------------
+    document.querySelectorAll('[data-lazy-style]').forEach((lazyStyledElement) => {
+      lazyStyledElement.setAttribute('style', lazyStyledElement.dataset.lazyStyle);
+      lazyStyledElement.removeAttribute('data-lazy-style');
+    });
 
-  iosVhFix();
+    document.removeEventListener('scroll', scrollHandler);
+  };
 
-  // Modules
-  // ---------------------------------
+  function scrollHandler() {
+    initLazy();
+  }
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
+  if (window.pageYOffset > window.innerHeight) {
+    initLazy();
+  } else {
+    document.addEventListener('scroll', scrollHandler);
+  }
 });
 
 // ---------------------------------
