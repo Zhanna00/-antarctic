@@ -20,6 +20,7 @@ export const getPictures = (filename, additions = {}, useTablet = true, useMobil
 };
 
 export default {
+  pageData: '{}',
   description: 'Сайт по организации туров в Антарктику.',
   projectName: 'Антарктика',
   socials: [

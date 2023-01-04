@@ -1,5 +1,9 @@
 .content {
   padding: 112px 0;
+
+  @include vp-1023 {
+    padding: 100px 0;
+  }
 }
 
 .content__promo {
@@ -10,11 +14,25 @@
   color: $color-tangaroa;
   margin-bottom: 25px;
 
+  @include vp-1023 {
+    grid-template-columns: 1fr 324px;
+    gap: 25px;
+    align-items: start;
+    margin-bottom: -6px;
+    padding-right: 50px;
+  }
+
   h2 {
     margin: -4px 0 24px 0;
     font-weight: 600;
     font-size: 28px;
     line-height: 42px;
+
+    @include vp-1023 {
+      margin: -10px 0 16px 0;
+      font-size: 26px;
+      line-height: 36px;
+    }
   }
 
   p {

@@ -1,17 +1,39 @@
 import html from '../../js/utils/html.js';
 import {getPictures} from '../global.js';
 
+const pageData = {
+  maps: {
+    contactsMap: {
+      initials: {
+        center: [59.9387165, 30.3230474],
+        controls: [],
+        zoom: 16,
+      },
+      placemark: [
+        {hintContent: 'г. Санкт Петербург, ул. Большая Конюшенная, 19/8'},
+        {
+          iconImageHref: 'img/sprite.svg#icon-pin',
+          iconImageSize: [18, 22],
+          iconLayout: 'default#image',
+          iconShadow: false,
+        },
+      ],
+    },
+  },
+};
+
 export default {
+  pageData: JSON.stringify(pageData),
   promo: {
     content: html`<h1>Круизы в Антарктику</h1>
       <p>Волшебный мир айсбергов и пингвинов</p>`,
     image: getPictures('firstscreen'),
   },
   about: {
-    content: html`<h2>Путешествие на край Земли</h2>
+    content: html`<h2>Путешествие на край&nbsp;Земли</h2>
       <p>
         Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер
-        отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских
+        отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько&nbsp;видов пингвинов, китов, морских
         котиков и многое другое.
       </p>`,
     image: getPictures('about'),
@@ -152,7 +174,7 @@ export default {
     background: getPictures('form-section'),
     backgroundColor: '#e3ecf6',
     content: html`<h2>Раннее бронирование</h2>
-      <p>Забронируйте тур за 3-6 месяцев<br>до даты выезда и сэкономьте до 50%</p>`,
+      <p>Забронируйте тур за 3-6 месяцев<br />до даты выезда и сэкономьте до 50%</p>`,
     form: {
       action: 'https://echo.htmlacademy.ru',
       description: 'Оставьте заявку и мы свяжемся с вами в ближайшее время',
@@ -188,6 +210,23 @@ export default {
       ],
       method: 'post',
       submitText: 'Оставить заявку',
+    },
+  },
+  location: {
+    content: html`<h2>Контакты</h2>
+      <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+      <p>
+        <img src="img/sprite.svg#icon-pin" width="18" height="22" alt="" aria-hidden="true" />
+        г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8
+      </p>
+      <p>
+        <img src="img/sprite.svg#icon-tel" width="18" height="18" alt="" aria-hidden="true" />
+        <a href="tel:+78002000000">8-800-200-00-00</a>
+      </p>`,
+    headless: true,
+    map: {
+      id: 'contactsMap',
+      image: getPictures('map', {alt: 'Адрес на карте.'}, false, false),
     },
   },
 };
