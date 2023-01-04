@@ -7,9 +7,15 @@
 
 .nav__link {
   display: block;
-  margin: 0 0 0 33px;
+  margin-left: 33px;
   padding: 10px 0;
   font-weight: 500;
   line-height: 20px;
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 24px;
+  }
 }

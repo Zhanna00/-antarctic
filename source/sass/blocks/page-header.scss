@@ -4,6 +4,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 35px 0;
+
+  @include vp-1023 {
+    padding: 21px 0 20px;
+  }
 }
 
 .page-header__toggler {
