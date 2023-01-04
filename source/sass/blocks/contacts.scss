@@ -1,0 +1,40 @@
+.contacts {
+  padding: 120px 0;
+
+  &--headless {
+    h2 {
+      @include visually-hidden;
+    }
+  }
+}
+
+.contacts__inner {
+  display: grid;
+  grid-template-columns: 1fr 560px;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 25px;
+
+  &--reverse {
+    grid-template-columns: 560px 1fr;
+    gap: 8.6%;
+    margin-bottom: 0;
+  }
+}
+
+.contacts__map {
+  order: -1;
+  height: 306px;
+  background-color: #fcfaf6;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.contacts__map.is-ready {
+  img {
+    display: none;
+  }
+}

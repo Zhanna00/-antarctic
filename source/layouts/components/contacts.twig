@@ -1,7 +1,15 @@
-<section class="contacts">
-	<div class="contacts__inner container"></div>
-	<div>
-	{{ content }}
+<section class="contacts {{ headless ? 'contacts--headless' }}" {{ id ? 'id="' ~ id ~ '"' }}>
+	<div class="contacts__inner {{ map ? 'contacts__inner--reverse' }} container">
+		<div {{ contains(content, '.svg#') ? 'class="contacts__iconable"' }}>
+			{{ content }}
+		</div>
 
+		{% if map %}
+			<div class="contacts__map map" id="{{ map.id }}" data-map>
+				{% include 'picture.twig' with map.image %}
+			</div>
+		{% else %}
+			{% include 'picture.twig' with image %}
+		{% endif %}
 	</div>
 </section>
