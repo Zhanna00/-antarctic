@@ -3,3 +3,11 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+.page__firstscreen {
+  box-shadow: 0 4px 4px $color-black-25;
+
+  @include vp-1023 {
+    box-shadow: none;
+  }
+}
