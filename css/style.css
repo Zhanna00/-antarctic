@@ -756,23 +756,41 @@ button,
 }
 
 .page-footer {
+  padding: 50px 0;
   background-color: #011c40;
   color: #f9fbfd;
+}
+
+.page-footer__inner {
+  display: grid;
+  grid-template-columns: auto 4fr 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-footer__nav-list {
+  margin: 0;
+}
+
+.page-footer__socials {
+  justify-self: end;
+  margin: 0;
+  transform: translate(9px, 1px);
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   padding: 0;
   list-style: none;
+  line-height: 20px;
 }
 
 .nav__link {
   display: block;
-  margin-left: 33px;
+  margin: 0 0 0 33px;
   padding: 10px 0;
-  font-weight: 500;
-  line-height: 20px;
   color: #f9fbfd;
 }
 
@@ -1358,6 +1376,41 @@ button,
   margin-right: 10px;
 }
 
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-left: 7px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 20px;
+}
+
+.socials__link--narrow {
+  width: 32px;
+  background-size: 12px 20px;
+}
+
+.socials__link--ok {
+  background-image: url("../img/sprite.svg#icon-ok");
+}
+
+.socials__link--dzen {
+  background-image: url("../img/sprite.svg#icon-dzen");
+}
+
+.socials__link--reddit {
+  background-image: url("../img/sprite.svg#icon-reddit");
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1408,10 +1461,30 @@ button,
     padding: 21px 0 20px;
   }
 
-  .nav__link {
+  .page-footer {
+    padding: 40px 0;
+  }
+
+  .page-footer__inner {
+    gap: 3px;
+  }
+
+  .page-footer__socials {
+    transform: translate(12px, 0);
+  }
+
+  .nav {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .nav__link {
     margin-left: 24px;
+  }
+
+  .nav--changes {
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .firstscreen__promo {
@@ -1520,8 +1593,38 @@ button,
     margin: 0 0 3px;
   }
 
+  .contacts {
+    padding: 100px 0;
+  }
+
+  .contacts p b:only-child {
+    margin: -3px 0 6px 0;
+  }
+
+  .contacts__inner--reverse {
+    grid-template-columns: 324px 1fr;
+    gap: 30px;
+  }
+
+  .contacts__map {
+    height: 335px;
+  }
+
+  .contacts__iconable img {
+    margin-top: 4px;
+  }
+
   .logo {
     width: 38px;
+  }
+
+  .socials__link {
+    margin-left: -1px;
+    background-size: 16px;
+  }
+
+  .socials__link--narrow {
+    background-size: 10px 16px;
   }
 }
 
