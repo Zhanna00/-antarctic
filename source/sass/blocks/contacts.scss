@@ -1,6 +1,10 @@
 .contacts {
   padding: 120px 0;
 
+  @include vp-1023 {
+    padding: 100px 0;
+  }
+
   p {
     margin: 0;
 
@@ -14,6 +18,10 @@
       font-weight: 500;
       font-size: 18px;
       line-height: 27px;
+
+      @include vp-1023 {
+        margin: -3px 0 6px 0;
+      }
     }
   }
 
@@ -35,6 +43,11 @@
     grid-template-columns: 560px 1fr;
     gap: 8.6%;
     margin-bottom: 0;
+
+    @include vp-1023 {
+      grid-template-columns: 324px 1fr;
+      gap: 30px;
+    }
   }
 }
 
@@ -46,6 +59,10 @@
   img {
     height: 100%;
     object-fit: cover;
+  }
+
+  @include vp-1023 {
+    height: 335px;
   }
 }
 
@@ -64,5 +81,9 @@
   img {
     flex-shrink: 0;
     margin-right: 10px;
+
+    @include vp-1023 {
+      margin-top: 4px;
+    }
   }
 }
