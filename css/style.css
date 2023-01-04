@@ -1165,8 +1165,7 @@ button,
   grid-template-columns: 1fr 403px;
   gap: 50px;
   align-items: center;
-  padding-right: 105px;
-  padding-left: 105px;
+  padding: 0 105px;
 }
 
 .form-section__content {
@@ -1289,6 +1288,22 @@ button,
   padding: 120px 0;
 }
 
+.contacts p {
+  margin: 0;
+}
+
+.contacts p + p {
+  margin-top: 21px;
+}
+
+.contacts p b:only-child {
+  display: block;
+  margin-bottom: 11px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
 .contacts--headless h2 {
   position: absolute;
   width: 1px;
@@ -1331,6 +1346,16 @@ button,
 
 .contacts__map.is-ready img {
   display: none;
+}
+
+.contacts__iconable p {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contacts__iconable img {
+  flex-shrink: 0;
+  margin-right: 10px;
 }
 
 /* @mixin hover-focus {
@@ -1464,6 +1489,35 @@ button,
 
   .cards__items {
     grid-template-columns: repeat(auto-fill, 309px);
+  }
+
+  .cards__content {
+    padding: 28px 35px 35px;
+  }
+
+  .cards__content h3 {
+    margin: auto 0 -7px;
+  }
+
+  .form-section {
+    padding: 100px 0;
+  }
+
+  .form-section__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .form-section__content {
+    text-align: center;
+  }
+
+  .form-section__content h2 {
+    margin: 0 0 19px;
+    font-size: 34px;
+  }
+
+  .form-section__content p {
+    margin: 0 0 3px;
   }
 
   .logo {
