@@ -62,11 +62,19 @@
   scrollbar-color: currentColor #011c40;
   scrollbar-width: thin;
 
+  @include vp-1023 {
+    padding: 28px 35px 35px;
+  }
+
   h3 {
     margin: auto 5px -12px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
+
+    @include vp-1023 {
+      margin: auto 0 -7px;
+    }
   }
 
   h4 {
