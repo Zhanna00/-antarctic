@@ -2,17 +2,25 @@
   background-color: var(--bg-color, transparent);
   background-repeat: no-repeat;
   background-size: cover;
-
   padding: 120px 0;
   color: $color-tangaroa;
 
   @include background-image;
+
+  @include vp-1023 {
+    padding: 100px 0;
+  }
 }
 
 .list__heading {
   margin: -2px 0 49px 0;
 
   @include heading;
+
+  @include vp-1023 {
+    margin: -13px 0 50px 0;
+    font-size: 26px;
+  }
 }
 
 .list__items {
@@ -22,11 +30,20 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @include vp-1023 {
+    gap: 30px;
+    align-items: baseline;
+  }
 }
 
 .list__item {
   padding: 30px;
   background-color: $color-alice-blue;
+
+  @include vp-1023 {
+    padding: 26px 20px 20px;
+  }
 
   &::before {
     content: "";
@@ -39,6 +56,11 @@
     &:first-of-type {
       margin-left: -8px;
     }
+
+    @include vp-1023 {
+      width: 36px;
+      height: 26px;
+    }
   }
 
   h3 {
@@ -46,11 +68,19 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
+
+    @include vp-1023 {
+      line-height: 25px;
+    }
   }
 
   p {
     margin: 0 0 15px;
     font-size: 14px;
     line-height: 20px;
+
+    @include vp-1023 {
+      margin: 0;
+    }
   }
 }
