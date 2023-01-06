@@ -39,10 +39,12 @@ body {
   height: 100%;
 
   background-color: $color-default-white;
+
+  overflow-x: hidden;
 }
 
 a {
-  color: $color-default-black;
+  color: inherit;
   text-decoration: none;
 }
 

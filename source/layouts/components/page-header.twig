@@ -1,7 +1,7 @@
-<header class="page-header {{ bemMix }}">
+<header class="page-header {{ bemMix }} no-js" data-page-header>
 	{% include 'logo.twig' %}
 
-	<button class="page-header__toggler" type="button">
+	<button class="page-header__toggler" type="button"  aria-controls="nav" aria-expanded="{{ expanded ? 'true' : false }}" data-toggler>
 		<span class="visually-hidden">Переключить режим отображения меню.</span>
 	</button>
 

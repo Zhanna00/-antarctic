@@ -1,5 +1,8 @@
 import initForm from './modules/form.js';
 import initMaps from './modules/map.js';
+import initPageHeader from './modules/page-header.js';
+
+document.querySelectorAll('.page-header').forEach(initPageHeader);
 
 // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
 // в load следует добавить скрипты, не участвующие в работе первого экрана
