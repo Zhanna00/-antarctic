@@ -23,11 +23,11 @@
   <div class="page">
     <div class="firstscreen page__firstscreen" style="--bg-default: url('../img/firstscreen.jpg');--bg-default2x: url('../img/firstscreen@2x.jpg');--bg-webp: url('../img/firstscreen.webp');--bg-webp2x: url('../img/firstscreen@2x.webp');">
       <div class="container">
-        <header class="page-header firstscreen__header">
+        <header class="page-header firstscreen__header no-js" data-page-header="">
           <a class="logo firstscreen__header" href="index.html">
             <img class="logo__image" src="img/svg/logo.svg" alt="Логотип Антарктика." width="70" height="38">
           </a>
-          <button class="page-header__toggler" type="button">
+          <button class="page-header__toggler" type="button" aria-controls="nav" aria-expanded="false" data-toggler="">
             <span class="visually-hidden">Переключить режим отображения меню.</span>
           </button>
           <nav class="page-header__nav" id="nav">
