@@ -33,6 +33,14 @@
     }
   }
 
+  a {
+    @include default-interactive;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
   &--headless {
     h2 {
       @include visually-hidden;

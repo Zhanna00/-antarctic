@@ -1,4 +1,6 @@
 .logo {
+  @include default-interactive;
+
   --color: currentColor;
   width: 70px;
 

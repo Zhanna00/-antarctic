@@ -22,6 +22,8 @@
   padding: 10px 0;
   font-weight: 500;
 
+  @include default-interactive;
+
   @include vp-1023 {
     margin-left: 24px;
   }

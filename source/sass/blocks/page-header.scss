@@ -28,6 +28,8 @@
   border: none;
   cursor: pointer;
 
+  @include default-interactive;
+
   &::before {
     content: "";
     width: 25px;

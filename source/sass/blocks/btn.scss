@@ -6,20 +6,11 @@
   font-family: $ff-montserrat;
   text-align: center;
   color: $color-tangaroa;
-
   background-color: $color-alice-blue;
   border: none;
   cursor: pointer;
   user-select: none;
   transition: opacity 0.3s ease;
 
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  @include default-interactive;
 }
