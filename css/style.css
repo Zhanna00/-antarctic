@@ -1466,7 +1466,7 @@ button,
 
 .logo {
   transition: opacity 0.3s ease;
-  --color: currentColor;
+  color: currentColor;
   width: 70px;
 }
 
@@ -1712,7 +1712,7 @@ button,
   }
 
   .form-section__content p {
-    margin: 0 0 3px;
+    margin: 0 0 2px;
   }
 
   .contacts {
@@ -1834,7 +1834,7 @@ button,
 
   .nav__link {
     margin: 0;
-    padding: 10px 0 7px 0;
+    padding: 8px 0 9px 0;
   }
 
   .firstscreen .no-js:hover + .firstscreen__promo,
@@ -1845,11 +1845,12 @@ button,
   }
 
   .firstscreen__promo {
-    min-height: 440px;
-    padding: 30px 0 94px;
+    min-height: 437px;
+    padding: 27px 0 94px;
   }
 
   .firstscreen__promo h1 {
+    margin-bottom: 10px;
     font-size: 36px;
     line-height: 45px;
   }
@@ -1940,7 +1941,7 @@ button,
   }
 
   .form__description {
-    margin: 4px 0 30px 0;
+    margin: 4px 0 29px 0;
     line-height: 25px;
     text-align: center;
   }
@@ -1982,6 +1983,10 @@ button,
   .contacts__map {
     height: 316px;
     order: initial;
+  }
+
+  .logo {
+    width: 42px;
   }
 }
 
