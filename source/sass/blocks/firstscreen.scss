@@ -34,8 +34,8 @@
   }
 
   @include vp-767 {
-    min-height: 440px;
-    padding: 30px 0 94px;
+    min-height: 437px;
+    padding: 27px 0 94px;
   }
 
   h1 {
@@ -50,6 +50,7 @@
     }
 
     @include vp-767 {
+      margin-bottom: 10px;
       font-size: 36px;
       line-height: 45px;
     }
