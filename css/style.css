@@ -630,15 +630,15 @@ button,
   -moz-user-select: none;
   user-select: none;
   transition: opacity 0.3s ease;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .btn.focus-visible:focus {
   opacity: 0.8;
+}
+
+.btn.focus-visible:active {
+  opacity: 0.5;
 }
 
 .modal {
@@ -756,6 +756,15 @@ button,
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.page-header__toggler.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.page-header__toggler.focus-visible:active {
+  opacity: 0.5;
 }
 
 .page-header__toggler::before {
@@ -814,6 +823,15 @@ button,
   margin: 0 0 0 33px;
   padding: 10px 0;
   font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.nav__link.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.nav__link.focus-visible:active {
+  opacity: 0.5;
 }
 
 .firstscreen {
@@ -1077,6 +1095,25 @@ button,
   overflow-y: auto;
   scrollbar-color: currentColor #011c40;
   scrollbar-width: thin;
+  scrollbar-color: currentColor #011c40;
+  scrollbar-width: thin;
+}
+
+.cards__content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #011c40;
+}
+
+.cards__content::-webkit-scrollbar-track {
+  background-color: #011c40;
+  border: 3px solid #f9fbfd;
+}
+
+.cards__content::-webkit-scrollbar-thumb {
+  background-color: currentColor;
+  border: none;
+  border-radius: 2px;
 }
 
 .cards__content h3 {
@@ -1253,6 +1290,11 @@ button,
   color: #011c40;
   background-color: #f9fbfd;
   border: none;
+  transition: opacity 0.3s ease;
+}
+
+.form__group input:not([type=checkbox]).focus-visible:focus {
+  opacity: 0.8;
 }
 
 .form__group [type=checkbox] {
@@ -1284,6 +1326,15 @@ button,
   font-size: 10px;
   line-height: 13px;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.form__group label.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.form__group label.focus-visible:active {
+  opacity: 0.5;
 }
 
 .form__group label [type=checkbox] {
@@ -1347,6 +1398,18 @@ button,
   line-height: 27px;
 }
 
+.contacts a {
+  transition: opacity 0.3s ease;
+}
+
+.contacts a.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.contacts a.focus-visible:active {
+  opacity: 0.5;
+}
+
 .contacts--headless h2 {
   position: absolute;
   width: 1px;
@@ -1402,8 +1465,17 @@ button,
 }
 
 .logo {
+  transition: opacity 0.3s ease;
   --color: currentColor;
   width: 70px;
+}
+
+.logo.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.logo.focus-visible:active {
+  opacity: 0.5;
 }
 
 .logo:not([href]) {
@@ -1432,6 +1504,15 @@ button,
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.socials__link.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.socials__link.focus-visible:active {
+  opacity: 0.5;
 }
 
 .socials__link--narrow {
@@ -1756,6 +1837,13 @@ button,
     padding: 10px 0 7px 0;
   }
 
+  .firstscreen .no-js:hover + .firstscreen__promo,
+  .firstscreen .no-js:focus-within + .firstscreen__promo,
+  .firstscreen .is-active + .firstscreen__promo {
+    margin-top: 63px;
+    opacity: 0;
+  }
+
   .firstscreen__promo {
     min-height: 440px;
     padding: 30px 0 94px;
@@ -1897,8 +1985,47 @@ button,
   }
 }
 
+@media (max-width: 599px) {
+  .cards__items {
+    grid-template-columns: minmax(270px, 309px);
+    padding: 0 10px;
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .page-header__toggler:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .nav__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .form__group input:not([type=checkbox]):hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .form__group label:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts a:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts a:hover:not(.focus-visible) {
+    text-decoration: underline;
+  }
+
+  .logo:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .socials__link:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 }
