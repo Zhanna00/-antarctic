@@ -5,6 +5,10 @@
     padding: 100px 0;
   }
 
+  @include vp-767 {
+    padding: 65px 0 72px;
+  }
+
   p {
     margin: 0;
 
@@ -21,6 +25,10 @@
 
       @include vp-1023 {
         margin: -3px 0 6px 0;
+      }
+
+      @include vp-767 {
+        margin-top: -8px;
       }
     }
   }
@@ -48,6 +56,10 @@
       grid-template-columns: 324px 1fr;
       gap: 30px;
     }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -56,13 +68,18 @@
   height: 306px;
   background-color: #fcfaf6;
 
+  @include vp-1023 {
+    height: 335px;
+  }
+
+  @include vp-767 {
+    height: 316px;
+    order: initial;
+  }
+
   img {
     height: 100%;
     object-fit: cover;
-  }
-
-  @include vp-1023 {
-    height: 335px;
   }
 }
 

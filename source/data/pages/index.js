@@ -174,7 +174,7 @@ export default {
     background: getPictures('form-section'),
     backgroundColor: '#e3ecf6',
     content: html`<h2>Раннее бронирование</h2>
-      <p>Забронируйте тур за 3-6 месяцев<br />до даты выезда и сэкономьте до 50%</p>`,
+      <p>Забронируйте тур за 3-6 месяцев&nbsp;до даты выезда и сэкономьте до 50%</p>`,
     form: {
       action: 'https://echo.htmlacademy.ru',
       description: 'Оставьте заявку и мы свяжемся с вами в ближайшее время',

@@ -1,6 +1,5 @@
 .logo {
-
-  color: currentColor;
+  --color: currentColor;
   width: 70px;
 
   @include vp-1023 {

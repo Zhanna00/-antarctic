@@ -1,3 +1,7 @@
-<a class="logo {{ bemMix }}" {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }} >
-	<img class="logo__image" src="img/svg/logo.svg" alt="Логотип {{ projectName}}." width="70" height="38">
+<a class="logo" {{ page == 'index' ? 'aria-current="page"' : 'href="index.html"' }}>
+	<span class="visually-hidden">На главную.</span>
+
+	<svg width="70" height="38" viewbox="0 0 70 38" role="img" focusable="false">
+		<use xlink:href="img/svg/logo.svg#logo"/>
+	</svg>
 </a>
