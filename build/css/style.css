@@ -435,7 +435,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
@@ -544,32 +544,6 @@ button,
   appearance: none;
 }
 
-.wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  /* stylelint-disable-next-line */
-  min-height: calc(100 * var(--vh, 1vh));
-}
-
-.wrapper .header,
-.wrapper .footer {
-  flex-shrink: 0;
-}
-
-.wrapper main {
-  flex-grow: 1;
-}
-
-.rouble {
-  font-family: "Rouble", "Arial", sans-serif;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -600,11 +574,6 @@ button,
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
-}
-
-.no-transition {
-  /* stylelint-disable-next-line */
-  transition: none !important;
 }
 
 .container {

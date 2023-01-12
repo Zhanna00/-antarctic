@@ -104,11 +104,11 @@
     font-size: 12px;
     color: $color-sunset-orange;
   }
+}
 
-  &.is-validable {
-    :invalid ~ strong {
-      display: block;
-    }
+.form__group.is-validable {
+  :invalid ~ strong {
+    display: block;
   }
 }
 

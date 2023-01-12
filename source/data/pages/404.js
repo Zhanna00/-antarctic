@@ -1,14 +1,10 @@
 import html from '../../js/utils/html.js';
+import {getPictures} from '../global.js';
 
 export default {
   promo: {
-    content: html`<h1>Круизы в Антарктику</h1>
-      <p>Волшебный мир айсбергов и пингвинов</p>`,
-    image: {
-      default: 'img/firstscreen.jpg',
-      default2x: 'img/firstscreen@2x.jpg',
-      webp: 'img/firstscreen.webp',
-      webp2x: 'img/firstscreen@2x.webp',
-    },
+    content: html`<h1>Ошибка 404</h1>
+      <p>страница не найдена</p>`,
+    image: getPictures('firstscreen'),
   },
 };

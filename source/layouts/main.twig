@@ -30,11 +30,11 @@
 				{% block main %}{% endblock %}
 			</main>
 
-				{% block footer %}
-					{% include 'components/page-footer.twig' %}
-				{% endblock %}
-			</div>
+			{% block footer %}
+				{% include 'components/page-footer.twig' %}
+			{% endblock %}
+		</div>
 
-			{% include 'modules/scripts.twig' %}
-		</body>
-	</html>
+		{% include 'modules/scripts.twig' %}
+	</body>
+</html>

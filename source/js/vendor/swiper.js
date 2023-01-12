@@ -311,7 +311,7 @@ const swiper = () => {
       return new Dom7(arrayUnique(arr));
     }
 
-    $.fn = Dom7.prototype; // eslint-disable-next-line
+    $.fn = Dom7.prototype;
 
     function addClass(...classes) {
       const classNames = arrayFlat(classes.map((c) => c.split(' ')));
@@ -415,7 +415,7 @@ const swiper = () => {
 
         if ($(target).is(targetSelector)) listener.apply(target, eventData);
         else {
-          const parents = $(target).parents(); // eslint-disable-line
+          const parents = $(target).parents();
 
           for (let k = 0; k < parents.length; k += 1) {
             if ($(parents[k]).is(targetSelector)) listener.apply(parents[k], eventData);
@@ -739,7 +739,7 @@ const swiper = () => {
       let i;
 
       if (child) {
-        i = 0; // eslint-disable-next-line
+        i = 0;
 
         while ((child = child.previousSibling) !== null) {
           if (child.nodeType === 1) i += 1;
@@ -844,7 +844,7 @@ const swiper = () => {
       if (!el) return $([]);
 
       while (el.nextElementSibling) {
-        const next = el.nextElementSibling; // eslint-disable-line
+        const next = el.nextElementSibling;
 
         if (selector) {
           if ($(next).is(selector)) nextEls.push(next);
@@ -881,7 +881,7 @@ const swiper = () => {
       if (!el) return $([]);
 
       while (el.previousElementSibling) {
-        const prev = el.previousElementSibling; // eslint-disable-line
+        const prev = el.previousElementSibling;
 
         if (selector) {
           if ($(prev).is(selector)) prevEls.push(prev);
@@ -894,7 +894,7 @@ const swiper = () => {
     }
 
     function parent(selector) {
-      const parents = []; // eslint-disable-line
+      const parents = [];
 
       for (let i = 0; i < this.length; i += 1) {
         if (this[i].parentNode !== null) {
@@ -910,10 +910,10 @@ const swiper = () => {
     }
 
     function parents(selector) {
-      const parents = []; // eslint-disable-line
+      const parents = [];
 
       for (let i = 0; i < this.length; i += 1) {
-        let parent = this[i].parentNode; // eslint-disable-line
+        let parent = this[i].parentNode;
 
         while (parent) {
           if (selector) {
@@ -930,7 +930,7 @@ const swiper = () => {
     }
 
     function closest(selector) {
-      let closest = this; // eslint-disable-line
+      let closest = this;
 
       if (typeof selector === 'undefined') {
         return $([]);
@@ -958,7 +958,7 @@ const swiper = () => {
     }
 
     function children(selector) {
-      const children = []; // eslint-disable-line
+      const children = [];
 
       for (let i = 0; i < this.length; i += 1) {
         const childNodes = this[i].children;
@@ -1127,7 +1127,6 @@ const swiper = () => {
     }
 
     function isNode(node) {
-      // eslint-disable-next-line
       if (typeof window !== 'undefined' && typeof window.HTMLElement !== 'undefined') {
         return node instanceof HTMLElement;
       }
@@ -1244,7 +1243,6 @@ const swiper = () => {
 
           try {
             const opts = Object.defineProperty({}, 'passive', {
-              // eslint-disable-next-line
               get() {
                 supportsPassive = true;
               },
@@ -1283,7 +1281,7 @@ const swiper = () => {
       };
       const screenWidth = window.screen.width;
       const screenHeight = window.screen.height;
-      const android = ua.match(/(Android);?[\s\/]+([\d.]+)?/); // eslint-disable-line
+      const android = ua.match(/(Android);?[\s\/]+([\d.]+)?/);
 
       let ipad = ua.match(/(iPad).*OS\s([\d_]+)/);
       const ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/);
@@ -1729,7 +1727,7 @@ const swiper = () => {
           swiper.grid.updateSlide(i, slide, slidesLength, getDirectionLabel);
         }
 
-        if (slide.css('display') === 'none') continue; // eslint-disable-line
+        if (slide.css('display') === 'none') continue;
 
         if (params.slidesPerView === 'auto') {
           if (shouldResetSlideSize) {
@@ -1751,7 +1749,6 @@ const swiper = () => {
           if (params.roundLengths) {
             slideSize = swiper.isHorizontal() ? slide.outerWidth(true) : slide.outerHeight(true);
           } else {
-            // eslint-disable-next-line
             const width = getDirectionPropertyValue(slideStyles, 'width');
             const paddingLeft = getDirectionPropertyValue(slideStyles, 'padding-left');
             const paddingRight = getDirectionPropertyValue(slideStyles, 'padding-right');
@@ -2045,7 +2042,7 @@ const swiper = () => {
       const swiper = this;
 
       if (typeof translate === 'undefined') {
-        const multiplier = swiper.rtlTranslate ? -1 : 1; // eslint-disable-next-line
+        const multiplier = swiper.rtlTranslate ? -1 : 1;
 
         translate = (swiper && swiper.translate && swiper.translate * multiplier) || 0;
       }
@@ -2742,7 +2739,7 @@ const swiper = () => {
 
       if (params.loop) {
         if (animating && params.loopPreventsSlide) return false;
-        swiper.loopFix(); // eslint-disable-next-line
+        swiper.loopFix();
 
         swiper._clientLeft = swiper.$wrapperEl[0].clientLeft;
       }
@@ -2762,7 +2759,7 @@ const swiper = () => {
 
       if (params.loop) {
         if (animating && params.loopPreventsSlide) return false;
-        swiper.loopFix(); // eslint-disable-next-line
+        swiper.loopFix();
 
         swiper._clientLeft = swiper.$wrapperEl[0].clientLeft;
       }
@@ -3251,7 +3248,6 @@ const swiper = () => {
         ) {
           data.isScrolling = false;
         } else {
-          // eslint-disable-next-line
           if (diffX * diffX + diffY * diffY >= 25) {
             touchAngle = (Math.atan2(Math.abs(diffY), Math.abs(diffX)) * 180) / Math.PI;
             data.isScrolling = swiper.isHorizontal()
@@ -3600,7 +3596,7 @@ const swiper = () => {
         swiper.translate = -wrapperEl.scrollLeft;
       } else {
         swiper.translate = -wrapperEl.scrollTop;
-      } // eslint-disable-next-line
+      }
 
       if (swiper.translate === -0) swiper.translate = 0;
       swiper.updateActiveIndex();
@@ -4456,7 +4452,6 @@ const swiper = () => {
             }
           }
         } else {
-          // eslint-disable-next-line
           if (view === 'current') {
             for (let i = activeIndex + 1; i < slides.length; i += 1) {
               const slideInView = exact
@@ -4540,7 +4535,6 @@ const swiper = () => {
         const currentDirection = swiper.params.direction;
 
         if (!newDirection) {
-          // eslint-disable-next-line
           newDirection = currentDirection === 'horizontal' ? 'vertical' : 'horizontal';
         }
 
@@ -5138,7 +5132,7 @@ const swiper = () => {
             const point = swiperCoord[i];
 
             if (point[0] >= 0 && point[0] <= windowWidth && point[1] >= 0 && point[1] <= windowHeight) {
-              if (point[0] === 0 && point[1] === 0) continue; // eslint-disable-line
+              if (point[0] === 0 && point[1] === 0) continue;
 
               inView = true;
             }
@@ -5832,7 +5826,7 @@ const swiper = () => {
     function classesToSelector(classes = '') {
       return `.${classes
         .trim()
-        .replace(/([\.:!\/])/g, '\\$1') // eslint-disable-line
+        .replace(/([\.:!\/])/g, '\\$1')
         .replace(/ /g, '.')}`;
     }
 
@@ -7570,7 +7564,7 @@ const swiper = () => {
           const point = swiperCoord[i];
 
           if (point[0] >= 0 && point[0] <= scrollElementWidth && point[1] >= 0 && point[1] <= scrollElementHeight) {
-            if (point[0] === 0 && point[1] === 0) continue; // eslint-disable-line
+            if (point[0] === 0 && point[1] === 0) continue;
 
             inView = true;
           }
@@ -8644,7 +8638,7 @@ const swiper = () => {
           let currentIndex = swiper.activeIndex;
 
           if (swiper.slides.eq(currentIndex).hasClass(swiper.params.slideDuplicateClass)) {
-            swiper.loopFix(); // eslint-disable-next-line
+            swiper.loopFix();
 
             swiper._clientLeft = swiper.$wrapperEl[0].clientLeft;
             currentIndex = swiper.activeIndex;
@@ -8717,7 +8711,7 @@ const swiper = () => {
 
           if (thumbsSwiper.params.loop) {
             if (thumbsSwiper.slides.eq(currentThumbsIndex).hasClass(thumbsSwiper.params.slideDuplicateClass)) {
-              thumbsSwiper.loopFix(); // eslint-disable-next-line
+              thumbsSwiper.loopFix();
 
               thumbsSwiper._clientLeft = thumbsSwiper.$wrapperEl[0].clientLeft;
               currentThumbsIndex = thumbsSwiper.activeIndex;
