@@ -75,6 +75,7 @@
   order: -1;
   height: 306px;
   background-color: #fcfaf6;
+  align-self: start;
 
   @include vp-1023 {
     height: 335px;

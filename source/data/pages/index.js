@@ -40,6 +40,7 @@ export default {
     alt: 'Пингвины на снегу',
   },
   benefits: {
+    id: 'benefits',
     heading: 'Преимущества',
     list: [
       {
@@ -72,6 +73,7 @@ export default {
     alt: 'Арктика',
   },
   offers: {
+    id: 'upcoming',
     heading: 'Ближайшие круизы',
     list: [
       {
@@ -194,7 +196,7 @@ export default {
             name="phone"
             type="tel"
             placeholder="Телефон"
-            pattern="^\\+7\\(\\d{3}\\)\\d{7}$"
+            pattern="^\+?[\d ()-]+$"
             required
           />
           <strong>Введите телефон (только цифры)</strong>
@@ -203,7 +205,7 @@ export default {
           <strong>Введите адрес электронной почты</strong>
           <label for="order-email">Email</label>`,
         html`<label>
-          <input name="agree" type="checkbox" checked required />
+          <input name="agree" type="checkbox" checked="" required />
           <span>Я согласен на обработку моих&nbsp;персональных&nbsp;данных</span>
           <strong>Согласие на обработку обязательно</strong>
         </label>`,
@@ -213,6 +215,7 @@ export default {
     },
   },
   location: {
+    id: 'location',
     content: html`<h2>Контакты</h2>
       <p>
         <b>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</b>

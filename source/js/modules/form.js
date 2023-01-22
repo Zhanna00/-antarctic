@@ -16,7 +16,7 @@ export default (formElement, id = 0) => {
       fieldElement.value = value;
     }
 
-    fieldElement.addEventListener('change', () => {
+    fieldElement.addEventListener('blur', () => {
       groupElement.classList.add('is-validable');
 
       if (fieldElement.checkValidity()) {

@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 560px;
   gap: 64px;
-  align-items: center;
+  align-self: center;
   color: $color-tangaroa;
   margin-bottom: 25px;
 
@@ -54,4 +54,8 @@
   p {
     margin: 0;
   }
+}
+
+.content__wrapper {
+  align-self: start;
 }
