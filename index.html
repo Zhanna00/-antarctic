@@ -24,7 +24,7 @@
     <div class="firstscreen page__firstscreen" style="--bg-default: url('../img/firstscreen.jpg');--bg-default2x: url('../img/firstscreen@2x.jpg');--bg-webp: url('../img/firstscreen.webp');--bg-webp2x: url('../img/firstscreen@2x.webp');--bg-webpTablet: url('../img/firstscreen-tablet.webp');--bg-webpTablet2x: url('../img/firstscreen-tablet@2x.webp');--bg-webpMobile: url('../img/firstscreen-mobile.webp');--bg-webpMobile2x: url('../img/firstscreen-mobile@2x.webp');">
       <div class="container">
         <header class="page-header firstscreen__header no-js" data-page-header="">
-          <a class="logo" aria-current="page">
+          <a class="logo firstscreen__header" aria-current="page">
             <span class="visually-hidden">На&nbsp;главную.</span>
             <svg width="70" height="38" viewbox="0 0 70 38" role="img" focusable="false">
               <use xlink:href="img/svg/logo.svg#logo"></use>
@@ -70,12 +70,14 @@
               морских котиков и&nbsp;многое другое.
             </p>
           </div>
-          <picture>
-            <source type="image/webp" media="(max-width: 320px)" srcset="img/about-mobile.webp 1x, img/about-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/about-tablet.webp 1x, img/about-tablet@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/about.webp 1x, img/about@2x.webp 2x">
-            <img src="img/about.jpg" srcset="img/about@2x.jpg 2x" alt="Пингвины на снегу" loading="lazy">
-          </picture>
+          <div class="content__wrapper">
+            <picture>
+              <source type="image/webp" media="(max-width: 320px)" srcset="img/about-mobile.webp 1x, img/about-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/about-tablet.webp 1x, img/about-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/about.webp 1x, img/about@2x.webp 2x">
+              <img src="img/about.jpg" srcset="img/about@2x.jpg 2x" alt="Пингвины на снегу" loading="lazy">
+            </picture>
+          </div>
         </div>
       </section>
 
@@ -274,7 +276,7 @@
               <label for="order-name">Имя</label>
             </p>
             <p class="form__group is-validable" data-group="">
-              <input id="order-phone" name="phone" type="tel" placeholder="Телефон" pattern="^\+7\(\d{3}\)\d{7}$" required="">
+              <input id="order-phone" name="phone" type="tel" placeholder="Телефон" pattern="^+?[d ()-]+$" required="">
               <strong>Введите телефон (только цифры)</strong>
               <label for="order-phone">Телефон</label>
             </p>
@@ -295,7 +297,7 @@
         </div>
       </section>
 
-      <section class="contacts contacts--headless">
+      <section class="contacts contacts--headless" id="location">
         <div class="contacts__inner contacts__inner--reverse container">
           <div class="contacts__iconable">
             <h2>Контакты</h2>
@@ -323,7 +325,7 @@
 
     <footer class="page-footer">
       <div class="page-footer__inner container">
-        <a class="logo" aria-current="page">
+        <a class="logo page-footer__logo" aria-current="page">
           <span class="visually-hidden">На&nbsp;главную.</span>
           <svg width="70" height="38" viewbox="0 0 70 38" role="img" focusable="false">
             <use xlink:href="img/svg/logo.svg#logo"></use>
