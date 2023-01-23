@@ -189,25 +189,21 @@ export default {
             pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
             required
           />
-          <strong>Введите имя из буквенных символов</strong>
           <label for="order-name">Имя</label>`,
         html`<input
             id="order-phone"
             name="phone"
             type="tel"
             placeholder="Телефон"
-            pattern="^\+?[\d ()-]+$"
+            pattern="^\\+7\\(\\d{3}\\)\\d{7}$"
             required
           />
-          <strong>Введите телефон (только цифры)</strong>
           <label for="order-phone">Телефон</label>`,
         html`<input id="order-email" name="email" type="email" placeholder="Email" required />
-          <strong>Введите адрес электронной почты</strong>
           <label for="order-email">Email</label>`,
         html`<label>
           <input name="agree" type="checkbox" checked="" required />
           <span>Я согласен на обработку моих&nbsp;персональных&nbsp;данных</span>
-          <strong>Согласие на обработку обязательно</strong>
         </label>`,
       ],
       method: 'post',
@@ -215,7 +211,7 @@ export default {
     },
   },
   location: {
-    id: 'location',
+    id: 'contacts',
     content: html`<h2>Контакты</h2>
       <p>
         <b>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</b>

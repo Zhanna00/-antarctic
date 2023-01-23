@@ -802,7 +802,7 @@ button,
   display: grid;
   grid-template-columns: 1fr 560px;
   gap: 64px;
-  align-self: center;
+  align-items: center;
   color: #011c40;
   margin-bottom: 25px;
 }
@@ -1130,7 +1130,7 @@ button,
 
 .form-section__content {
   color: #011c40;
-  align-items: center;
+  align-self: center;
 }
 
 .form-section__content h2 {
@@ -1171,8 +1171,9 @@ button,
 
 .form__group input:not([type=checkbox]) {
   width: 100%;
-  padding: 13px 16px 12px;
+  padding: 11px 16px;
   font-size: 14px;
+  line-height: 1.5;
   color: #011c40;
   background-color: #f9fbfd;
   border: none;
@@ -1246,15 +1247,6 @@ button,
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-}
-
-.form__group [name] ~ strong {
-  display: none;
-  width: 100%;
-  margin: 5px 0 0;
-  font-weight: inherit;
-  font-size: 12px;
-  color: #fa5f55;
 }
 
 .form__group.is-validable :invalid ~ strong {
@@ -1356,6 +1348,7 @@ button,
 
 .logo {
   transition: opacity 0.3s ease;
+  align-self: start;
   color: currentColor;
   width: 70px;
 }
@@ -1382,6 +1375,7 @@ button,
   display: grid;
   grid-template-columns: repeat(3, min-content);
   justify-items: center;
+  align-self: start;
   padding: 0;
   list-style: none;
 }
@@ -1473,7 +1467,7 @@ button,
   }
 
   .page-footer {
-    padding: 40px 0 16px 0;
+    padding: 40px 0;
   }
 
   .page-footer__inner {
@@ -1627,6 +1621,7 @@ button,
   }
 
   .logo {
+    margin-top: 9px;
     width: 38px;
   }
 
@@ -1698,6 +1693,10 @@ button,
     mask: url("../img/sprite.svg#icon-close") no-repeat center/100%;
   }
 
+  .page-footer {
+    padding-bottom: 17px;
+  }
+
   .page-footer__inner {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -1716,6 +1715,16 @@ button,
 
   .nav__link {
     margin: 0 0 8px 10px;
+  }
+
+  .nav--changes {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .nav--changes .nav__link {
+    margin: 0;
+    padding: 8px 0 9px;
   }
 
   .firstscreen .is-active + .firstscreen__promo {
@@ -1900,6 +1909,7 @@ button,
   }
 
   .logo {
+    margin-top: 0;
     width: 42px;
   }
 }

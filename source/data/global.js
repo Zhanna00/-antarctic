@@ -43,19 +43,19 @@ export default {
   ],
   navLinks: [
     {
-      url: '#!',
+      url: '#benefits',
       title: 'Преимущества',
     },
     {
-      url: '#!',
+      url: '#upcoming',
       title: 'Направления',
     },
     {
-      url: '#!',
+      url: '#upcoming',
       title: 'Ближайшие круизы',
     },
     {
-      url: '#!',
+      url: '#contacts',
       title: 'Контакты',
     },
   ],

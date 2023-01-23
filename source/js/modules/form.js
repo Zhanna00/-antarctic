@@ -1,9 +1,8 @@
 export default (formElement, id = 0) => {
-  const groupElements = formElement.querySelectorAll('[data-group]');
-  let firstSubmit = true;
+  const fieldElements = formElement.querySelectorAll('[name]');
+  let storageSupported = false;
 
-  groupElements.forEach((groupElement) => {
-    const fieldElement = groupElement.querySelector('[name]');
+  fieldElements.forEach((fieldElement) => {
     const {name, type} = fieldElement;
 
     if (type === 'password') {
@@ -11,32 +10,36 @@ export default (formElement, id = 0) => {
     }
 
     const fieldId = `form-${id}-${name}`;
-    const value = localStorage.getItem(fieldId);
-    if (value !== null) {
-      fieldElement.value = value;
+
+    try {
+      const value = localStorage.getItem(fieldId);
+      storageSupported = true;
+
+      if (value !== null) {
+        fieldElement.value = value;
+      }
+    } catch (error) {
+      // Do nothing
     }
 
-    fieldElement.addEventListener('blur', () => {
-      groupElement.classList.add('is-validable');
+    if (type === 'tel') {
+      window.Maska.create(fieldElement, {
+        mask: '+7(###)#######',
+      });
 
+      if (!fieldElement.value) {
+        fieldElement.value = '+7(';
+      }
+    }
+
+    fieldElement.addEventListener('change', () => {
       if (fieldElement.checkValidity()) {
-        localStorage.setItem(fieldId, fieldElement.value);
+        if (storageSupported) {
+          localStorage.setItem(fieldId, fieldElement.value);
+        }
+      } else {
+        fieldElement.reportValidity();
       }
     });
-
-    groupElement.classList.remove('is-validable');
   });
-
-  formElement.addEventListener('submit', (evt) => {
-    if (firstSubmit) {
-      groupElements.forEach((groupElement) => groupElement.classList.add('is-validable'));
-      firstSubmit = false;
-    }
-
-    if (!formElement.checkValidity()) {
-      evt.preventDefault();
-    }
-  });
-
-  formElement.setAttribute('novalidate', '');
 };

@@ -36,16 +36,16 @@
           <nav class="page-header__nav" id="nav">
             <ul class="nav page-header__nav-list">
               <li>
-                <a class="nav__link" href="#!">Преимущества</a>
+                <a class="nav__link" href="#benefits">Преимущества</a>
               </li>
               <li>
-                <a class="nav__link" href="#!">Направления</a>
+                <a class="nav__link" href="#upcoming">Направления</a>
               </li>
               <li>
-                <a class="nav__link" href="#!">Ближайшие круизы</a>
+                <a class="nav__link" href="#upcoming">Ближайшие круизы</a>
               </li>
               <li>
-                <a class="nav__link" href="#!">Контакты</a>
+                <a class="nav__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -81,7 +81,7 @@
         </div>
       </section>
 
-      <section class="list " style="--bg-default: url('../img/advantages.jpg');--bg-default2x: url('../img/advantages@2x.jpg');--bg-webp: url('../img/advantages.webp');--bg-webp2x: url('../img/advantages@2x.webp');--bg-webpTablet: url('../img/advantages-tablet.webp');--bg-webpTablet2x: url('../img/advantages-tablet@2x.webp');--bg-webpMobile: url('../img/advantages-mobile.webp');--bg-webpMobile2x: url('../img/advantages-mobile@2x.webp');--bg-color: #e3ecf6;">
+      <section class="list " style="--bg-default: url('../img/advantages.jpg');--bg-default2x: url('../img/advantages@2x.jpg');--bg-webp: url('../img/advantages.webp');--bg-webp2x: url('../img/advantages@2x.webp');--bg-webpTablet: url('../img/advantages-tablet.webp');--bg-webpTablet2x: url('../img/advantages-tablet@2x.webp');--bg-webpMobile: url('../img/advantages-mobile.webp');--bg-webpMobile2x: url('../img/advantages-mobile@2x.webp');--bg-color: #e3ecf6;" id="benefits">
         <div class="container">
           <h2 class="list__heading">Преимущества</h2>
           <ul class="list__items">
@@ -110,7 +110,7 @@
         </div>
       </section>
 
-      <section class="cards">
+      <section class="cards" id="upcoming">
         <div class="container">
           <h2 class="cards__heading">Ближайшие круизы</h2>
           <ul class="cards__items">
@@ -272,24 +272,20 @@
             <p class="form__description">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
             <p class="form__group is-validable" data-group="">
               <input id="order-name" name="name" type="text" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required="">
-              <strong>Введите имя из&nbsp;буквенных символов</strong>
               <label for="order-name">Имя</label>
             </p>
             <p class="form__group is-validable" data-group="">
-              <input id="order-phone" name="phone" type="tel" placeholder="Телефон" pattern="^+?[d ()-]+$" required="">
-              <strong>Введите телефон (только цифры)</strong>
+              <input id="order-phone" name="phone" type="tel" placeholder="Телефон" pattern="^\+7\(\d{3}\)\d{7}$" required="">
               <label for="order-phone">Телефон</label>
             </p>
             <p class="form__group is-validable" data-group="">
               <input id="order-email" name="email" type="email" placeholder="Email" required="">
-              <strong>Введите адрес электронной почты</strong>
               <label for="order-email">Email</label>
             </p>
             <p class="form__group is-validable" data-group="">
               <label>
                 <input name="agree" type="checkbox" checked="" required="">
                 <span>Я&nbsp;согласен на&nbsp;обработку моих&nbsp;персональных&nbsp;данных</span>
-                <strong>Согласие на&nbsp;обработку обязательно</strong>
               </label>
             </p>
             <button class="form__btn btn" type="submit">Оставить заявку</button>
@@ -297,7 +293,7 @@
         </div>
       </section>
 
-      <section class="contacts contacts--headless" id="location">
+      <section class="contacts contacts--headless" id="contacts">
         <div class="contacts__inner contacts__inner--reverse container">
           <div class="contacts__iconable">
             <h2>Контакты</h2>
@@ -333,16 +329,16 @@
         </a>
         <ul class="nav page-footer__nav-list nav--changes">
           <li>
-            <a class="nav__link" href="#!">Преимущества</a>
+            <a class="nav__link" href="#benefits">Преимущества</a>
           </li>
           <li>
-            <a class="nav__link" href="#!">Направления</a>
+            <a class="nav__link" href="#upcoming">Направления</a>
           </li>
           <li>
-            <a class="nav__link" href="#!">Ближайшие круизы</a>
+            <a class="nav__link" href="#upcoming">Ближайшие круизы</a>
           </li>
           <li>
-            <a class="nav__link" href="#!">Контакты</a>
+            <a class="nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
         <ul class="socials page-footer__socials">

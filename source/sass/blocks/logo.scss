@@ -1,14 +1,17 @@
 .logo {
   @include default-interactive;
 
+  align-self: start;
   color: currentColor;
   width: 70px;
 
   @include vp-1023 {
+    margin-top: 9px;
     width: 38px;
   }
 
   @include vp-767 {
+    margin-top: 0;
     width: 42px;
   }
 
