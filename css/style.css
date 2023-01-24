@@ -432,6 +432,7 @@ body {
 }
 
 html {
+  scroll-behavior: smooth;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1247,10 +1248,6 @@ button,
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-}
-
-.form__group.is-validable :invalid ~ strong {
-  display: block;
 }
 
 .form__btn {
