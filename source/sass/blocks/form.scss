@@ -100,12 +100,6 @@
   }
 }
 
-.form__group.is-validable {
-  :invalid ~ strong {
-    display: block;
-  }
-}
-
 .form__btn {
   width: 100%;
   min-height: 43px;
